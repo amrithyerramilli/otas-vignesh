@@ -1,0 +1,33 @@
+﻿@model IEnumerable<OTAS.Controllers.Combination>
+@{
+    ViewBag.Title = "Summary";
+}
+
+<h2>Summary</h2>
+
+@*@foreach(var r in ViewBag.data){
+    @r.SubCode<br />
+    
+}
+@foreach (var r in ViewBag.teachers)
+{
+    @r<br />
+
+}
+@foreach (var r in ViewBag.subjects)
+{
+    @r<br />
+
+}*@
+<table class="table-hover-striped">
+    <tr><th>Subject Code</th><th>Subject Name</th><th>Professor Name</th></tr>
+@foreach(var r in ViewBag.combination){
+    
+    <tr>
+        <td>@r.Subjectcode</td>
+        <td>@r.Subjectname</td>
+        <td>@r.Teachername</td>
+    </tr>
+}
+</table>
+@Html.ActionLink("Rating", "Rating")
