@@ -1,0 +1,139 @@
+﻿@model OTAS.Models.RatingsModel
+
+@{
+    ViewBag.Title = "Rating";
+}
+
+<h2>Rating</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>RatingsModel</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.RID)
+
+        <div class="form-group">
+            @Html.Label("Question 1.", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+               @Html.RadioButtonFor(model => model.A1, "4") Option1
+               @Html.RadioButtonFor(model => model.A1, "3") Option2
+               @Html.RadioButtonFor(model => model.A1, "2") Option3
+               @Html.RadioButtonFor(model => model.A1, "1") Option4
+               @Html.ValidationMessageFor(model => model.A1)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Question 2.", new { @class = "control-label col-md-2" })
+            <div class="col-md-10 editor-field">
+                @Html.RadioButtonFor(m => m.A2, "4") Option1
+                @Html.RadioButtonFor(m => m.A2, "3") Option2
+                @Html.RadioButtonFor(m => m.A2, "2") Option3
+                @Html.RadioButtonFor(m => m.A2, "1") Option4
+                @Html.ValidationMessageFor(model => model.A2)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Question 3.", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.RadioButtonFor(m => m.A3, "4") Option1
+                @Html.RadioButtonFor(m => m.A3, "3") Option2
+                @Html.RadioButtonFor(m => m.A3, "2") Option3
+                @Html.RadioButtonFor(m => m.A3, "1") Option4
+                @Html.ValidationMessageFor(model => model.A3)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Question 4.", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.RadioButtonFor(m => m.A4, "4") Option1
+                @Html.RadioButtonFor(m => m.A4, "3") Option2
+                @Html.RadioButtonFor(m => m.A4, "2") Option3
+                @Html.RadioButtonFor(m => m.A4, "1") Option4
+                @Html.ValidationMessageFor(model => model.A4)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Question 5.", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.RadioButtonFor(m => m.A5, "4") Option1
+                @Html.RadioButtonFor(m => m.A5, "3") Option2
+                @Html.RadioButtonFor(m => m.A5, "2") Option3
+                @Html.RadioButtonFor(m => m.A5, "1") Option4
+                @Html.ValidationMessageFor(model => model.A5)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Question 6.", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.RadioButtonFor(m => m.A6, "4") Option1
+                @Html.RadioButtonFor(m => m.A6, "3") Option2
+                @Html.RadioButtonFor(m => m.A6, "2") Option3
+                @Html.RadioButtonFor(m => m.A6, "1") Option4
+                @Html.ValidationMessageFor(model => model.A6)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Question 7.", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.RadioButtonFor(m => m.A7, "4") Option1
+                @Html.RadioButtonFor(m => m.A7, "3") Option2
+                @Html.RadioButtonFor(m => m.A7, "2") Option3
+                @Html.RadioButtonFor(m => m.A7, "1") Option4
+                @Html.ValidationMessageFor(model => model.A7)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Question 8.", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.RadioButtonFor(m => m.A8, "4") Option1
+                @Html.RadioButtonFor(m => m.A8, "3") Option2
+                @Html.RadioButtonFor(m => m.A8, "2") Option3
+                @Html.RadioButtonFor(m => m.A8, "1") Option4
+                @Html.ValidationMessageFor(model => model.A8)
+            </div>
+        </div>
+
+        <div class="form-group">
+           @Html.Label("Question 9.", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.RadioButtonFor(m => m.A9, "4") Option1
+                @Html.RadioButtonFor(m => m.A9, "3") Option2
+                @Html.RadioButtonFor(m => m.A9, "2") Option3
+                @Html.RadioButtonFor(m => m.A9, "1") Option4
+                @Html.ValidationMessageFor(model => model.A9)
+            </div>
+        </div>
+
+        <div class="form-group">
+           @Html.Label("Question 10.", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.RadioButtonFor(m => m.A10, "4") Option1
+                @Html.RadioButtonFor(m => m.A10, "3") Option2
+                @Html.RadioButtonFor(m => m.A10, "2") Option3
+                @Html.RadioButtonFor(m => m.A10, "1") Option4
+                @Html.ValidationMessageFor(model => model.A10)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="EfDbContext-Web.config Connection String" description="EfDbContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=Otas1;Initial Catalog=Otas1;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Vignesh\\documents\\visual\ studio\ 2013\\Projects\\OTAS\\OTAS\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='EfDbContext']/@connectionString" />
+  </parameter>
+</parameters>

@@ -1,0 +1,148 @@
+﻿@model OTAS.Models.RatingsModel
+
+@{
+    ViewBag.Title = "Rating";
+}
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@Scripts.Render("~/bundles/jqueryval")
+<h2>Rating</h2>
+<h2>@ViewBag.rate.Teachername</h2>
+<h2>@ViewBag.rate.Subjectname</h2>
+<h2>@ViewBag.rate.Subjectcode</h2>
+<h2>@ViewBag.rate.Tid</h2>
+<h2>@ViewBag.rate.Rid</h2>
+
+@using (Html.BeginForm("Evaluation","Home"))
+{
+    
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <h4>RatingsModel</h4>
+        
+        @Html.ValidationSummary(true)
+        @Html.Hidden("RID",(object)ViewBag.rate.Rid)
+        @*@Html.HiddenFor(model => model.RID = ViewBag.rate.Rid)*@
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.A1, new { @class = "control-label col-md-2" })
+            <div class="editor-field">
+                @Html.RadioButtonFor(model => model.A1, "4") Very Effective and Clear
+                @Html.RadioButtonFor(model => model.A1, "3") Effective and Understandable
+                @Html.RadioButtonFor(model => model.A1, "2") Moderately effective and Reasonably clear
+                @Html.RadioButtonFor(model => model.A1, "1") Ineffective and not clear
+                @Html.ValidationMessageFor(model => model.A1)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.A2, new { @class = "control-label col-md-2" })
+            <div class="editor-field">
+                @Html.RadioButtonFor(model => model.A2, "4") In-depth
+                @Html.RadioButtonFor(model => model.A2, "3") Adequate
+                @Html.RadioButtonFor(model => model.A2, "2") Moderate
+                @Html.RadioButtonFor(model => model.A2, "1") Inadequate
+                @Html.ValidationMessageFor(model => model.A2)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.A3, new { @class = "control-label col-md-2" })
+            <div class="editor-field">
+                @Html.RadioButtonFor(model => model.A3, "4") Complete Utilization and Satisfactory Coverage
+                @Html.RadioButtonFor(model => model.A3, "3") Complete Utilization and Adequate Coverage
+                @Html.RadioButtonFor(model => model.A3, "2") Partial Utilization and Unsatisfactory Coverage
+                @Html.RadioButtonFor(model => model.A3, "1") Partial Utilization and  Under Coverage
+                @Html.ValidationMessageFor(model => model.A3)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.A4, new { @class = "control-label col-md-2" })
+            <div class="editor-field">
+                @Html.RadioButtonFor(model => model.A4, "4") Excellent Control
+                @Html.RadioButtonFor(model => model.A4, "3") Good Control
+                @Html.RadioButtonFor(model => model.A4, "2") Moderate Control
+                @Html.RadioButtonFor(model => model.A4, "1") Poor Control
+                @Html.ValidationMessageFor(model => model.A4)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.A5, new { @class = "control-label col-md-2" })
+            <div class="editor-field">
+                @Html.RadioButtonFor(model => model.A5, "4") Most of the time
+                @Html.RadioButtonFor(model => model.A5, "3") Occasionally
+                @Html.RadioButtonFor(model => model.A5, "2") Rarely
+                @Html.RadioButtonFor(model => model.A5, "1") Never
+                @Html.ValidationMessageFor(model => model.A5)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.A6, new { @class = "control-label col-md-2" })
+            <div class="editor-field">
+                @Html.RadioButtonFor(model => model.A6, "4") Most of the time
+                @Html.RadioButtonFor(model => model.A6, "3") Occasionally
+                @Html.RadioButtonFor(model => model.A6, "2") Rarely
+                @Html.RadioButtonFor(model => model.A6, "1") Never
+                @Html.ValidationMessageFor(model => model.A6)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.A7, new { @class = "control-label col-md-2" })
+            <div class="editor-field">
+                @Html.RadioButtonFor(model => model.A7, "4") Most of the time
+                @Html.RadioButtonFor(model => model.A7, "3") Occasionally
+                @Html.RadioButtonFor(model => model.A7, "2") Rarely
+                @Html.RadioButtonFor(model => model.A7, "1") Never
+                @Html.ValidationMessageFor(model => model.A7)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.A8, new { @class = "control-label col-md-2" })
+            <div class="editor-field">
+                @Html.RadioButtonFor(model => model.A8, "4") Very Useful
+                @Html.RadioButtonFor(model => model.A8, "3") Useful
+                @Html.RadioButtonFor(model => model.A8, "2") Satisfactory
+                @Html.RadioButtonFor(model => model.A8, "1") Less Useful
+                @Html.ValidationMessageFor(model => model.A8)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.A9, new { @class = "control-label col-md-2" })
+            <div class="editor-field">
+                @Html.RadioButtonFor(model => model.A9, "4") Well Covered
+                @Html.RadioButtonFor(model => model.A9, "3") Adequately Covered
+                @Html.RadioButtonFor(model => model.A9, "2") Moderately Covered
+                @Html.RadioButtonFor(model => model.A9, "1") Poorly Covered
+                @Html.ValidationMessageFor(model => model.A9)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.A10, new { @class = "control-label col-md-2" })
+            <div class="editor-field">
+                @Html.RadioButtonFor(model => model.A10, "4") Very Fair
+                @Html.RadioButtonFor(model => model.A10, "3") Fair
+                @Html.RadioButtonFor(model => model.A10, "2") Satisfactory
+                @Html.RadioButtonFor(model => model.A10, "1") Unfair
+                @Html.ValidationMessageFor(model => model.A10)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
